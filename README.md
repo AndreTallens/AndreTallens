@@ -1,4 +1,4 @@
-## Bem-vindo(a) ao perfil do AndreTallens 😁
+## Bem-vindo(a) ao perfil do AndreTallens 
 
  <div>
    <a href="https://github.com/AndreTallens">
