@@ -1,3 +1,5 @@
+<!-- last-update: 2025-11-07T00:00:00Z -->
+
 <h1 align="center">🎮 AndreTallens | Game Developer & Ilustrador Aspirante 🎨</h1>
 
 <p align="center">
@@ -36,18 +38,22 @@
 ### 📂 Projetos em destaque
 | Projeto | Descrição | Linguagem |
 |----------|------------|------------|
-| [**Imersacoss**](https://github.com/AndreTallens/imersacoss) | Site simples com HTML e CSS | CSS |
-| [**AreaDoTriangulo**](https://github.com/AndreTallens/AreaDoTriangulo) | Cálculo da área de triângulo em Java | Java |
-| [**ProGeo**](https://github.com/AndreTallens/ProGeo) | Landing Page da Consultoria Jr | HTML |
-| [**Pedra-Papel-Tesoura-Lagart-Spock**](https://github.com/AndreTallens/Pedra-papel-tesoura-lagart-spock) | Jogo de matriz em Java | Java |
-| [**Metodos-e-Vetores**](https://github.com/AndreTallens/Metodos-e-Vetores) | Exercícios de Java | Java |
+| [**Imersacoss**](https://github.com/andretallens/imersacoss) | Site simples com HTML e CSS | CSS |
+| [**AreaDoTriangulo**](https://github.com/andretallens/AreaDoTriangulo) | Cálculo da área de triângulo em Java | Java |
+| [**ProGeo**](https://github.com/andretallens/ProGeo) | Landing Page da Consultoria Jr | HTML |
+| [**Pedra-Papel-Tesoura-Lagart-Spock**](https://github.com/andretallens/Pedra-papel-tesoura-lagart-spock) | Jogo de matriz em Java | Java |
+| [**Metodos-e-Vetores**](https://github.com/andretallens/Metodos-e-Vetores) | Exercícios de Java | Java |
 
 ---
 
 ### 📊 Estatísticas
 <p align="center">
-  <img height="165em" src="https://github-readme-stats.vercel.app/api?username=AndreTallens&show_icons=true&theme=radical&count_private=true"/>
-  <img height="165em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AndreTallens&layout=compact&theme=radical"/>
+  <img height="165em" src="https://github-readme-stats.vercel.app/api?username=andretallens&show_icons=true&theme=radical&count_private=false&cache_seconds=1800" alt="GitHub Stats"/>
+  <img height="165em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=andretallens&layout=compact&theme=radical&cache_seconds=1800" alt="Top Languages"/>
+</p>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=andretallens&theme=radical" alt="GitHub Streak"/>
 </p>
 
 ---
@@ -55,7 +61,7 @@
 ### 🌐 Contatos
 <p align="center">
   <a href="https://www.linkedin.com/in/andretallens/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-  <a href="mailto:seuemail@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+  <a href="mailto:seuemail@exemplo.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
   <a href="https://andretallens.itch.io"><img src="https://img.shields.io/badge/Itch.io-FA5C5C?style=for-the-badge&logo=itchdotio&logoColor=white"/></a>
 </p>
 
@@ -64,3 +70,4 @@
 <p align="center">
   ✨ “Criar é transformar ideias em experiências.” ✨
 </p>
+
