@@ -1,0 +1,57 @@
+name: Force refresh README (update timestamp)
+
+on:
+  push:
+    # roda em push para qualquer branch (você pode restringir a main/master)
+    branches:
+      - '**'
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check last commit message for [skip ci]
+        id: check_skip
+        run: |
+          LAST_MSG=$(git log -1 --pretty=%B || echo "")
+          echo "last_msg<<EOF" >> $GITHUB_OUTPUT
+          echo "$LAST_MSG" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Exit if last commit contains [skip ci]
+        if: contains(steps.check_skip.outputs.last_msg, '[skip ci]')
+        run: |
+          echo "Last commit contains [skip ci]. Exiting to avoid loops."
+      
+      - name: Checkout repository
+        if: "!contains(steps.check_skip.outputs.last_msg, '[skip ci]')"
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Update README timestamp
+        if: "!contains(steps.check_skip.outputs.last_msg, '[skip ci]')"
+        run: |
+          README="README.md"
+          # formata ISO8601 (UTC)
+          TS=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          # marcador que vamos substituir (crie esse marcador no seu README)
+          MARKER="<!-- last-update:"
+          if grep -q "$MARKER" "$README"; then
+            # substitui a linha do marcador
+            perl -0777 -pe "s/<!--\s*last-update:.*?-->/<!-- last-update: $TS -->/s" -i "$README"
+          else
+            # se não existir, adiciona no topo (ou ajuste para o local desejado)
+            sed -i "1i<!-- last-update: $TS -->\n" "$README"
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$README"
+          git commit -m "chore: update README timestamp [skip ci]" || echo "nothing to commit"
+
+      - name: Push changes
+        if: "!contains(steps.check_skip.outputs.last_msg, '[skip ci]')"
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
