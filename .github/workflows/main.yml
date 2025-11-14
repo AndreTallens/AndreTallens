@@ -1,0 +1,39 @@
+name: Atualizar README
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Atualizar Estatísticas e Último Commit
+        uses: kevinzunigacuellar/github-profile-readme-generator@2.0.0
+        with:
+          username: andretallens
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: "🤖 Atualização automática do README (Estatísticas e Último Commit)"
+          # Configuração de Estatísticas
+          stats_enabled: true
+          stats_theme: radical
+          stats_exclude_repo: ""
+          # Configuração do Último Commit
+          latest_commit_enabled: true
+          latest_commit_title: "⭐ Último Destaque/Commit"
+          latest_commit_max_days: 365
+          latest_commit_count: 1
+          latest_commit_type: "list"
+
+      - name: Commit e Push das alterações do README
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🤖 Atualização automática do README (Estatísticas e Último Commit)"
