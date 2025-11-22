@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <b>Game dev apaixonado por arte, animação e experiências interativas.</b><br/>
+  <b>Game dev apaixonado por arte, animação e experiências interativas, geografo.</b><br/>
   Trabalho com <b>Unity</b>, <b>Construct</b>, <b>Java</b> e <b>Front-End</b>, sempre buscando unir lógica e criatividade.
 </p>
 
