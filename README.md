@@ -1,4 +1,4 @@
-<h1 align="center">🎮 AndreTallens | Game Developer & Ilustrador Aspirante 🎨</h1>
+<h1 align="center">🎮 AndreTallens | Game Developer & Ilustrador</h1>
 
 <p align="center">
   <img src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake.svg" alt="Snake animation" />
